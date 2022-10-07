@@ -1,5 +1,5 @@
 export class FaceSnap {
-    // // Création de classe "verbeuse"
+    // // Méthode #1 : Création de classe "verbeuse"
     // title: string;
     // description: string;
     // createdDate: Date;
@@ -14,11 +14,23 @@ export class FaceSnap {
     //     this.imageUrl = myUrl;
     // }
 
-    // Création de classe "raccourcie"
-    constructor(public title: string, 
-                public description: string, 
-                public createdDate: Date, 
-                public snaps: number, 
-                public imageUrl: string) {
-    }
+
+    // // Méthode #2 : Création de classe "moins verbeuse"
+    // constructor(public title: string, 
+    //             public description: string, 
+    //             public createdDate: Date, 
+    //             public snaps: number, 
+    //             public imageUrl: string,
+    //             public location?: string) {
+    // }
+
+    // Méthode #3 : Création de classe plus lisible, sans constructeur
+    // Du coup, il faudra modifier la création des FaceSnaps dans AppComponent 
+    // pour simplement créer des objets qui ont les propriétés requises
+    title!: string;
+    description!: string;
+    createdDate!: Date;
+    snaps!: number;
+    imageUrl!: string;
+    location?: string;
 }
