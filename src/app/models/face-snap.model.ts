@@ -27,6 +27,7 @@ export class FaceSnap {
     // Méthode #3 : Création de classe plus lisible, sans constructeur
     // Du coup, il faudra modifier la création des FaceSnaps dans AppComponent 
     // pour simplement créer des objets qui ont les propriétés requises
+    id!: number;
     title!: string;
     description!: string;
     createdDate!: Date;
